@@ -41,12 +41,15 @@ namespace Data
             await Initialize(url);
             List<string> toReturn = new List<string>();
 
-            foreach (var User in allAuthors)
+            if (allAuthors != null)
             {
-                toReturn.Add(User.username);
-            }
+                foreach (var user in allAuthors)
+                {
+                    toReturn.Add(user.username);
+                }
 
-            authorNames = toReturn;
+                authorNames = toReturn;
+            }
         }
 
         /// <summary>

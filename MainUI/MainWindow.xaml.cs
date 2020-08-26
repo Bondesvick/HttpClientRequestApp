@@ -29,7 +29,6 @@ namespace MainUI
             {
                 MessageBox.Show(exception.Message, "Error!");
             }
-
             this.DataContext = allAuthors;
         }
 

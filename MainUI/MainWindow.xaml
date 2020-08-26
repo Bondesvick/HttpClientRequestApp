@@ -19,7 +19,8 @@
         <!--       col 1     -->
 
         <GroupBox Header="All Author Names" Grid.Column="0">
-            <ListBox x:Name="Users" Padding="2" ItemsSource="{Binding Path=authorNames}" />
+            <ListBox x:Name="Users" Padding="2" ItemsSource="{Binding Path=authorNames}">
+            </ListBox>
         </GroupBox>
 
         <!--       col 2     -->
@@ -49,7 +50,7 @@
                 <GroupBox Header="1" Grid.Row="0">
                     <StackPanel>
                         <TextBlock FontWeight="Normal" Margin="0 4 0 8" TextWrapping="WrapWithOverflow" TextTrimming="None">Show names of the most active authors (using submission count as the criteria) according to a set threshold.</TextBlock>
-                        <TextBox ToolTip="threshold" x:Name="SubmitThresh" Margin="0 0 0 8" Height="30"></TextBox>
+                        <TextBox ToolTip="Threshold" x:Name="SubmitThresh" Margin="0 0 0 8" Height="30"></TextBox>
                         <Button x:Name="BySubmission" Height="40" Click="BySubmission_Click">Show</Button>
                     </StackPanel>
                 </GroupBox>
@@ -67,7 +68,7 @@
                     <StackPanel>
                         <TextBlock FontWeight="Normal" TextWrapping="WrapWithOverflow" TextTrimming="None" Margin="0 8 0 8">Show the names of authors sorted by when their record was created according to a set threshold.</TextBlock>
 
-                        <DatePicker x:Name="Picker" Margin="0 0 0 8" IsTodayHighlighted="True" SelectedDateFormat="Short" />
+                        <DatePicker x:Name="Picker" Margin="0 0 0 8" IsTodayHighlighted="True" SelectedDateFormat="Short" ToolTip="Threshold" />
                         <Button x:Name="ByCreated" Height="40" Click="ByCreated_Click">Show</Button>
                     </StackPanel>
                 </GroupBox>

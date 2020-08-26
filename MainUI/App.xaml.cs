@@ -11,7 +11,8 @@ namespace MainUI
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
+            IUsersData usersData = Injector.Inject();
+            //await usersData.GetNames(@"https://jsonmock.hackerrank.com/api/article_users/search?page=");
             MainWindow mw = new MainWindow(Injector.Inject());
             mw.Show();
         }
